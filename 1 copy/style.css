@@ -73,12 +73,77 @@ html,body{height:100%;margin:0;font-family:var(--font-sans);background:linear-gr
 
 /* socials */
 .socials{display:flex;gap:8px;flex-wrap:wrap}
-.sbtn{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:#fff;font-weight:700}
-.sbtn.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b)}
-.sbtn.tiktok{background:linear-gradient(45deg,#000,#ff0050)}
-.sbtn.yt{background:linear-gradient(45deg,#ff0000,#ff6a6a)}
-.sbtn.fb{background:linear-gradient(45deg,#3b5998,#2d4373)}
-.sbtn.dc{background:linear-gradient(45deg,#7289da,#4e5d9b)}
+.sbtn{padding:8px 10px;border-radius:9px;background:rgba(255,255,255,0.03);text-decoration:none;color:#fff;font-weight:700}
+.sbtn.instagram {
+  background: none;
+  background-image: url('https://customersfiles.frcreator.eu/primus/images/instagram.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  border: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  display: inline-block;
+}
+.sbtn.tiktok {
+  background: none;
+  background-image: url('https://customersfiles.frcreator.eu/primus/images/tiktok.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  border: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  display: inline-block;
+}
+.sbtn.yt {
+  background: none;
+  background-image: url('https://customersfiles.frcreator.eu/primus/images/youtube.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  border: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  display: inline-block;
+}
+.sbtn.fb {
+  background: none;
+  background-image: url('https://customersfiles.frcreator.eu/primus/images/facebook.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  border: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  display: inline-block;
+}
+.sbtn.dc {
+  background: none;
+  background-image: url('https://customersfiles.frcreator.eu/primus/images/discord.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  border: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  display: inline-block;
+}
 
 /* vote */
 .vote-input{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:8px}
