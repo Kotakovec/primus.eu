@@ -25,7 +25,7 @@ function createPostCard(post){
   p.textContent = post.excerpt;
   const meta = document.createElement('div');
   meta.className = 'meta';
-  meta.innerHTML = `<span>❤ ${Math.floor(Math.random()*40)+1}</span><span>${post.date}</span>`;
+  meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
 
   body.appendChild(h3);
   body.appendChild(p);
@@ -50,8 +50,8 @@ function renderStatus(){
   const members = document.getElementById('member-count');
 
   // náhodná čísla pro demo
-  online.textContent = (Math.floor(Math.random()*25)+3) + '';
-  members.textContent = (Math.floor(Math.random()*7000)+300) + '';
+  online.textContent = '0';
+  members.textContent = '0';
 }
 
 // inicializace
