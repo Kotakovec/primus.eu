@@ -417,12 +417,21 @@ body {
 
 .at-name {
   position: absolute;
-  top: 60px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,0);
   font-size: 18px;
   font-weight: bold;
   color: #fff;
+}
+
+.at-role {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 14px;
+  color: var(--muted);
 }
 
 .at-soc {
