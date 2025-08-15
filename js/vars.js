@@ -5,7 +5,7 @@ document.querySelector('.sidebar').innerHTML = `
       </div>
 
       <nav class="menu">
-        <a class="menu-item" href="#">Hlavní Stránka</a>
+        <a class="menu-item" href="/">Hlavní Stránka</a>
         <a class="menu-item" href="/at">AdminTeam</a>
         <a class="menu-item" href="#">Store</a>
         <a class="menu-item" href="#">Pravidla</a>

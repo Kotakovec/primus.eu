@@ -60,8 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-if (window.location.pathname === '/at') document.querySelectorAll('.menu-item').forEach(el => {
+if (window.location.pathname === '/') document.querySelectorAll('.menu-item').forEach(el => {
+  if (el.getAttribute('href') === '/') el.classList.add('active');
+  else if (el.classList.contains('active'))
+  el.classList.remove('active');
+});
+else if (window.location.pathname === '/at') document.querySelectorAll('.menu-item').forEach(el => {
   if (el.getAttribute('href') === '/at') el.classList.add('active');
   else if (el.classList.contains('active'))
   el.classList.remove('active');
