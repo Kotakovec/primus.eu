@@ -427,6 +427,9 @@ body {
 
 .at-role {
   position: absolute;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--panel);
   top: 70%;
   left: 50%;
   transform: translate(-50%,0);
