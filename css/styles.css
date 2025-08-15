@@ -395,6 +395,7 @@ body {
 }
 
 .at-card {
+  margin: 2em;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 25%, rgba(59, 34, 32, 0.8) 75%);
   border-radius: 12px;
   padding: 12px;
@@ -407,7 +408,6 @@ body {
   /*display: flex;
   gap: 12px;
   align-items: center;*/
-  margin: 2em;
   border-radius: 5px;
   padding: 5px;
   position: relative;
