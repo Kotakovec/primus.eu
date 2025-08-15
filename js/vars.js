@@ -56,3 +56,15 @@ document.querySelector('.rightbar').innerHTML = `
         </div>
       </div>
 `;
+
+document.querySelectorAll('.menu-item').forEach(el => {
+  const linkPath = el.getAttribute('href');
+  const currentPath = window.location.pathname;
+
+  // If the link matches the current path, add 'active', else remove it
+  if (linkPath === currentPath) {
+    el.classList.add('active');
+  } else {
+    el.classList.remove('active');
+  }
+});

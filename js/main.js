@@ -58,15 +58,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // aktualizuj status každých 10s (demo)
   setInterval(renderStatus, 10000);
 });
-
-
-if (window.location.pathname === '/') document.querySelectorAll('.menu-item').forEach(el => {
-  if (el.getAttribute('href') === '/') el.classList.add('active');
-  else if (el.classList.contains('active'))
-  el.classList.remove('active');
-});
-else if (window.location.pathname === '/at') document.querySelectorAll('.menu-item').forEach(el => {
-  if (el.getAttribute('href') === '/at') el.classList.add('active');
-  else if (el.classList.contains('active'))
-  el.classList.remove('active');
-});
