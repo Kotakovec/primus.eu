@@ -1,4 +1,10 @@
-document.getElementById('navb').innerHTML = `
+document.querySelector('.sidebar').innerHTML = `
+      <div class="logo-row">
+        <div class="logo">PM</div>
+        <div class="brand">Primus</div>
+      </div>
+
+      <nav class="menu">
         <a class="menu-item active" href="#">Hlavní Stránka</a>
         <a class="menu-item" href="/at">AdminTeam</a>
         <a class="menu-item" href="#">Store</a>
@@ -7,4 +13,46 @@ document.getElementById('navb').innerHTML = `
         <a class="menu-item" href="#">Spolupráce</a>
         <a class="menu-item" href="#">Nábory</a>
         <a class="menu-item" href="#">Statistiky</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <small>© 2025 primuscraft.fun</small>
+        <small>Created by Koťák & MrTomiCZ</small>
+      </div>
+`;
+document.querySelector('.topbar').innerHTML = `
+        <div class="user">Nepřihlášen</div>
+`;
+document.querySelector('.rightbar').innerHTML = `
+        <div class="card status-card">
+        <h4>STATUS</h4>
+        <div class="status-line">
+          <div class="dot online"></div>
+          <div>
+            <div class="muted">Online:</div>
+            <div id="online-count">—</div>
+            <div class="muted small">mc.primuscraft.fun</div>
+          </div>
+        </div>
+        <hr>
+        <div class="status-line">
+          <div class="icon">👥</div>
+          <div>
+            <div class="muted">Členů:</div>
+            <div id="member-count">—</div>
+            <a class="small link" href="#">Klikni pro připojení</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card socials-card">
+        <h4>SOCIÁLNÍ SÍTĚ</h4>
+        <div class="socials">
+          <button class="sbtn instagram">IG</button>
+          <button class="sbtn tiktok">TT</button>
+          <button class="sbtn yt">YT</button>
+          <button class="sbtn fb">FB</button>
+          <button class="sbtn dc">DC</button>
+        </div>
+      </div>
 `;
