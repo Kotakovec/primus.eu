@@ -403,10 +403,11 @@ body {
   width: 231px;
 }
 
-.status-line {
+.status {
   /*display: flex;
   gap: 12px;
   align-items: center;*/
+  margin: 2em;
   border-radius: 5px;
   padding: 5px;
   position: relative;
@@ -417,10 +418,10 @@ body {
   width: 75%;
   height: 1px;
 }
-.status-line.on {
+.status.on {
   background-color: #36ff4a;
 }
-.status-line.off {
+.status.off {
   background-color: #ff3636;
 }
 
