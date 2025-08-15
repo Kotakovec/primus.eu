@@ -31,6 +31,7 @@ function createPostCard(post){
 }
 
 function renderFeed(){
+  if (window.location.pathname !== '/') return;
   const feed = document.getElementById('feed');
   feed.innerHTML = '';
   posts.forEach(p => {
