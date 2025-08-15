@@ -1,0 +1,14 @@
+{
+    "redirects": [
+        {
+            "source": "/at",
+            "destination": "/pages/ateam.html",
+            "statusCode": 200
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/pages/404.html",
+            "statusCode": 404
+        }
+    ]
+}
