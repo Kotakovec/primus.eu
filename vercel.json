@@ -1,14 +1,7 @@
 {
-    "redirects": [
-        {
-            "source": "/at",
-            "destination": "/pages/ateam.html",
-            "statusCode": 200
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/pages/404.html",
-            "statusCode": 404
-        }
-    ]
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/at", "status": 200, "dest": "/pages/ateam.html" },
+    { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
+  ]
 }
