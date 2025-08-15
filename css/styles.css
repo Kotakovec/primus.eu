@@ -439,7 +439,7 @@ body {
 
 .at-soc {
   position: absolute;
-  top: 90px;
+  top: 90%;
   left: 50%;
   transform: translate(-50%,0);
   font-size: 14px;
