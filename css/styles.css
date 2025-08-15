@@ -411,14 +411,15 @@ body {
   /*display: flex;
   gap: 12px;
   align-items: center;*/
-  border-radius: 12px;
-  padding: 12px;
+  border-radius: 5px;
+  padding: 5px;
   position: relative;
   top: 0;
   left: 50%;
   right: 50%;
+  transform: translate(-50%, 0);
   width: 75%;
-  height: 8px;
+  height: 1px;
 }
 .status-line.on {
   background-color: #36ff4a;
