@@ -3,6 +3,10 @@ const posts = [
   { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
 ];
 
+const posts = [
+  { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
+];
+
 function createPostCard(post){
   const postEl = document.createElement('article');
   postEl.className = 'post card';
