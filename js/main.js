@@ -73,7 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   document.querySelectorAll('[data-dcid]').forEach(el => {
-    el.innerHTML = `Nerušit`;
-    el.classList.add('dnd');
+    const resp = await fetch('https://corsproxy.io/?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'));
+    const status = await resp.text();
+    let statusCZ;
+    if (status === 'online') {
+      statusCZ = 'Online';
+    } else if (status === 'offline') {
+      statusCZ = 'Offline';
+    } else if (status === 'dnd') {
+      statusCZ = 'Nerušit';
+    } else if (status === 'idle') {
+      statusCZ = 'Pryč';
+    }
+      
+
+    el.innerHTML = statusCZ;
+    el.classList.add('status');
   });
 });
