@@ -57,17 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // aktualizuj status každých 10s (demo)
   setInterval(renderStatus, 10000);
-});
 
-document.querySelectorAll('[data-name]').forEach(el => {
-  const rank = el.innerHTML;
-  // Add transition style for smooth effect
-  el.style.transition = 'color 0.3s ease, background 0.3s ease';
+  document.querySelectorAll('[data-name]').forEach(el => {
+    const rank = el.innerHTML;
+    // Add transition style for smooth effect
+    el.style.transition = 'color 0.3s ease, background 0.3s ease';
 
-  el.addEventListener('mouseover', function() {
-    el.textContent = el.getAttribute('data-name');
-  });
-  el.addEventListener('mouseout', function() {
-    el.textContent = rank;
+    el.addEventListener('mouseover', function() {
+      el.textContent = el.getAttribute('data-name');
+    });
+    el.addEventListener('mouseout', function() {
+      el.textContent = rank;
+    });
   });
 });
