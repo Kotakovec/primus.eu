@@ -15,16 +15,7 @@ document.querySelector('.sidebar').innerHTML = `
         <a class="menu-item" href="#">Statistiky</a>
       </nav>
 
-      <div class="sidebar-footer">
-        <small>© 2025 primuscraft.fun</small>
-        <small>Created by Koťák & MrTomiCZ</small>
-      </div>
-`;
-document.querySelector('.topbar').innerHTML = `
-        <div class="user">Nepřihlášen</div>
-`;
-document.querySelector('.rightbar').innerHTML = `
-        <div class="card status-card">
+      <div class="card status-card">
         <h4>STATUS</h4>
         <div class="status-line">
           <div class="dot online"></div>
@@ -45,6 +36,15 @@ document.querySelector('.rightbar').innerHTML = `
         </div>
       </div>
 
+      <div class="sidebar-footer">
+        <small>© 2025 primuscraft.fun</small>
+        <small>Created by Koťák & MrTomiCZ</small>
+      </div>
+`;
+document.querySelector('.topbar').innerHTML = `
+        <div class="user">Nepřihlášen</div>
+`;
+document.querySelector('.rightbar').innerHTML = `
       <div class="card socials-card">
         <h4>SOCIÁLNÍ SÍTĚ</h4>
         <div class="socials">
