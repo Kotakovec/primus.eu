@@ -94,6 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
 
     el.innerHTML = statusCZ;
-    el.classList.add('status');
+    el.classList.add(status);
   });
 });
