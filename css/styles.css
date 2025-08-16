@@ -94,6 +94,7 @@ body {
   margin-top: auto;
   color: var(--muted);
   font-size: 12px;
+  text-align: center;
 }
 
 .content {
