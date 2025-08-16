@@ -511,6 +511,14 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     font-family: sans-serif;
 }
+[data-dcid] {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
 
 /* small screens */
 @media (max-width: 1100px) {

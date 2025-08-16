@@ -72,4 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.fontSize = '';
     });
   });
+  document.querySelectorAll('[data-dcid]').forEach(el => {
+    el.innerHTML = `test`;
+  });
 });
