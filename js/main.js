@@ -61,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('[data-name]').forEach(el => {
   const rank = el.innerHTML;
+  // Add transition style for smooth effect
+  el.style.transition = 'color 0.3s ease, background 0.3s ease';
+
   el.addEventListener('mouseover', function() {
-    console.log('hover '+rank);
     el.textContent = el.getAttribute('data-name');
   });
   el.addEventListener('mouseout', function() {
-    console.log('out '+rank);
     el.textContent = rank;
   });
 });
