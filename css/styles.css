@@ -91,7 +91,7 @@ body {
   border-left-color: var(--accent);
 }
 .sidebar-footer {
-  margin-top: auto;
+  /*margin-top: auto;*/
   color: var(--muted);
   font-size: 12px;
   text-align: center;
@@ -543,7 +543,7 @@ body {
 }
 
 .status-card {
-  bottom:0;
+  margin-top: auto;
 }
 
 /* small screens */
