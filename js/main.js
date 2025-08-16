@@ -58,3 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // aktualizuj status každých 10s (demo)
   setInterval(renderStatus, 10000);
 });
+
+document.querySelectorAll('data-name').forEach(el => {
+  const rank = el.innerHTML;
+  el.addEventListener('mouseover', function() {
+    el.textContent = el.getAttribute('data-name');
+  });
+  el.addEventListener('mouseout', function() {
+    el.textContent = rank;
+  });
+});

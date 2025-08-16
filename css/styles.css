@@ -429,7 +429,7 @@ body {
   position: absolute;
   border-radius: 5px;
   padding: 5px;
-  background-color: var(--panel);
+  background-color: var(--panel-2);
   top: 70%;
   left: 50%;
   transform: translate(-50%,0);
