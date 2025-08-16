@@ -41,9 +41,9 @@ document.querySelector('.sidebar').innerHTML = `
         <small>Created by Koťák & MrTomiCZ</small>
       </div>
 `;
-document.querySelector('.topbar').innerHTML = `
+/*document.querySelector('.topbar').innerHTML = `
         <div class="user">Nepřihlášen</div>
-`;
+`;*/
 document.querySelector('.rightbar').innerHTML = `
       <div class="card socials-card">
         <h4>SOCIÁLNÍ SÍTĚ</h4>
