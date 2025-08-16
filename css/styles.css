@@ -506,6 +506,9 @@ body {
 .status.off {
   background-color: #ff3636;
 }
+.status.break {
+  background-color: #ff7b00;
+}
 
 .odznacek span {
   display: inline-block;
