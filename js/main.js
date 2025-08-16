@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.fontSize = '';
     });
   });
-  document.querySelectorAll('[data-dcid]').forEach(el => {
+  document.querySelectorAll('[data-dcid]').forEach(async el => {
     const resp = await fetch('https://corsproxy.io/?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'), {
       method: 'GET',
       headers: {
