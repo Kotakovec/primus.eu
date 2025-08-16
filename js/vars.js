@@ -50,8 +50,6 @@ document.querySelector('.rightbar').innerHTML = `
         <div class="socials">
           <button class="sbtn instagram">IG</button>
           <button class="sbtn tiktok">TT</button>
-          <button class="sbtn yt">YT</button>
-          <button class="sbtn fb">FB</button>
           <button class="sbtn dc">DC</button>
         </div>
       </div>
