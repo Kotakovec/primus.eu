@@ -11,6 +11,7 @@ function createPostCard(post){
   const thumb = document.createElement('div');
   thumb.className = 'thumb';
   thumb.style.background = post.image;
+  thumb.style.backgroundPosition = "center";
   postEl.appendChild(thumb);
 
   const body = document.createElement('div');
