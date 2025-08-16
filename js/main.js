@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(renderStatus, 10000);
 });
 
-document.querySelectorAll('data-name').forEach(el => {
+document.querySelectorAll('[data-name]').forEach(el => {
   const rank = el.innerHTML;
   el.addEventListener('mouseover', function() {
     console.log('hover '+rank);
