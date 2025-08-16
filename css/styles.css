@@ -530,7 +530,7 @@ body {
   background: #f0c000;
   color: white;
   font-weight: bold;
-  padding: 5px 50px;
+  padding: 3px 50px;
   text-align: center;
   transform: rotate(45deg) translateX(4em);
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
