@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   document.querySelectorAll('[data-dcid]').forEach(async el => {
-    const resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'), {
+    const cacheBuster = Date.now();
+    const resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid')+"&buster="+cacheBuster, {
       method: 'GET',
       headers: {
         'Host': 'primuscraft.fun'
