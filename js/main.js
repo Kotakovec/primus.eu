@@ -1,6 +1,7 @@
 // jednoduchá data struktura pro články (nahraď reálnými daty)
 const posts = [
   { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
+  { id:2, title:"Se serverem nám pomáhá FrCreator", date:"16.8.2025", excerpt:"Lidi z FrCreatoru: Koťák a MrTomiCZ", image:"linear-gradient(180deg,#9B00FF,#7D00D1)"}
 ];
 
 function createPostCard(post){
@@ -20,7 +21,7 @@ function createPostCard(post){
   p.textContent = post.excerpt;
   const meta = document.createElement('div');
   meta.className = 'meta';
-  meta.innerHTML = `<span>❤️ 0</span><span>${post.date}</span>`;
+  meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
 
   body.appendChild(h3);
   body.appendChild(p);
