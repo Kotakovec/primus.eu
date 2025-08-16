@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   document.querySelectorAll('[data-dcid]').forEach(el => {
-    el.innerHTML = `test`;
+    el.innerHTML = `Nerušit`;
+    el.classList.add('dnd');
   });
 });

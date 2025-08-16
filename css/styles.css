@@ -450,6 +450,21 @@ body {
   font-size: 12px;
 }
 
+[data-dcid].online {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+[data-dcid].dnd {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+[data-dcid].idle {
+  background: rgba(241, 196, 15, 0.2);
+  color: #f1c40f;
+}
+
 .at-role {
   position: absolute;
   border-radius: 5px;
