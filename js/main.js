@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(renderStatus, 10000);
 
   document.querySelectorAll('[data-name]').forEach(el => {
-    const rank = el.innerHTML;
+    const rank = el.textContent;
     // Add transition style for smooth effect
-    el.style.transition = 'color 0.3s ease, background 0.3s ease';
+    el.style.transition = 'all 0.3s ease';
 
     el.addEventListener('mouseover', function() {
       el.textContent = el.getAttribute('data-name');
