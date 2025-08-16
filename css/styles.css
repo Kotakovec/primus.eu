@@ -490,7 +490,7 @@ body {
 
 @keyframes scroll {
   from {
-    transform: translateX(0);
+    transform: translateX(20%);
   }
   to {
     transform: translateX(-100%);
@@ -507,7 +507,7 @@ body {
     font-weight: bold;
     padding: 5px 50px;
     text-align: center;
-    transform: rotate(45deg) translateX(3em);
+    transform: rotate(45deg) translateX(4em);
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     font-family: sans-serif;
 }
