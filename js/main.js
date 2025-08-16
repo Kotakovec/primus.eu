@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('data-name').forEach(el => {
   const rank = el.innerHTML;
   el.addEventListener('mouseover', function() {
+    console.log('hover '+rank);
     el.textContent = el.getAttribute('data-name');
   });
   el.addEventListener('mouseout', function() {
+    console.log('out '+rank);
     el.textContent = rank;
   });
 });
