@@ -5,314 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feed & Status</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      margin: 0;
-      padding: 20px;
-    }
-    #status {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-    .post.card {
-      display: flex;
-      background: #fff;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .post .thumb {
-      width: 120px;
-      height: 120px;
-      flex-shrink: 0;
-    }
-    .post .body {
-      padding: 10px;
-    }
-    .post h3 {
-      margin: 0 0 10px 0;
-      font-size: 18px;
-    }
-    .post p {
-      margin: 0 0 10px 0;
-      color: #333;
-    }
-    .post .meta {
-      font-size: 14px;
-      color: #777;
-      display: flex;
-      justify-content: space-between;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+    .post.card { display: flex; background: #fff; margin-bottom: 20px; border-radius: 8px; overflow: hidden; }
+    .post .thumb { width: 120px; height: 120px; flex-shrink: 0; }
+    .post .body { padding: 10px; }
+    .post h3 { margin: 0 0 10px 0; font-size: 18px; }
+    .post p { margin: 0 0 10px 0; color: #333; }
+    .post .meta { font-size: 14px; color: #777; display: flex; justify-content: space-between; }
   </style>
 </head>
 <body>
 
-  <div id="status">
-    <div>Online: <span id="online-count">0</span></div>
-    <div>Members: <span id="member-count">0</span></div>
-  </div>
+<div>
+  Online: <span id="online-count">0</span> | Members: <span id="member-count">0</span>
+</div>
 
-  <div id="feed"></div>
+<div id="feed"></div>
 
-  <script>
-    // jednoduchá data struktura pro články
-    const posts = [
-      { id:1, title:"VYHLÁŠENÍ - Squid Game", date:"8.8.2025", excerpt:"Ve středu proběhl SquidGame event S2...", image:"linear-gradient(180deg,#8a3b2e,#5a2a20)"},
-      { id:2, title:"SQUID GAME S2", date:"4.8.2025", excerpt:"SQUID GAME SEZÓNA 2... milionový jackpot", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:3, title:"RESOURCE PACK", date:"26.7.2025", excerpt:"Nový systém craftingových bloků a nábytku...", image:"linear-gradient(180deg,#274b3b,#143527)"},
-      { id:4, title:"AQUARYON", date:"14.7.2025", excerpt:"Summer draK Aquaryon obsadil End arénu...", image:"linear-gradient(180deg,#3b2a5a,#1a0f2a)"},
-      { id:5, title:"BATTLE PASS", date:"30.6.2025", excerpt:"BattlePass 4. sezóna od 17.7.2025...", image:"linear-gradient(180deg,#6b2a2a,#3b1a1a)"},
-      { id:6, title:"Novinky & Eventy", date:"29.7.2025", excerpt:"Nová GACHA sezóna - SUMMER", image:"linear-gradient(180deg,#3b5a2a,#1a2b18)"},
-    ];
+<script>
+const posts = [
+  { id:1, title:"VYHLÁŠENÍ - Squid Game", date:"8.8.2025", excerpt:"Ve středu proběhl SquidGame event S2...", image:"linear-gradient(180deg,#8a3b2e,#5a2a20)"},
+  { id:2, title:"SQUID GAME S2", date:"4.8.2025", excerpt:"SQUID GAME SEZÓNA 2... milionový jackpot", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
+  { id:3, title:"RESOURCE PACK", date:"26.7.2025", excerpt:"Nový systém craftingových bloků a nábytku...", image:"linear-gradient(180deg,#274b3b,#143527)"},
+  { id:4, title:"AQUARYON", date:"14.7.2025", excerpt:"Summer draK Aquaryon obsadil End arénu...", image:"linear-gradient(180deg,#3b2a5a,#1a0f2a)"},
+  { id:5, title:"BATTLE PASS", date:"30.6.2025", excerpt:"BattlePass 4. sezóna od 17.7.2025...", image:"linear-gradient(180deg,#6b2a2a,#3b1a1a)"},
+  { id:6, title:"Novinky & Eventy", date:"29.7.2025", excerpt:"Nová GACHA sezóna - SUMMER", image:"linear-gradient(180deg,#3b5a2a,#1a2b18)"},
+];
 
-    function createPostCard(post){
-      const postEl = document.createElement('article');
-      postEl.className = 'post card';
+function createPostCard(post){
+  const postEl = document.createElement('article');
+  postEl.className = 'post card';
 
-      const thumb = document.createElement('div');
-      thumb.className = 'thumb';
-      thumb.style.background = post.image;
-      postEl.appendChild(thumb);
+  const thumb = document.createElement('div');
+  thumb.className = 'thumb';
+  thumb.style.background = post.image;
+  postEl.appendChild(thumb);
 
-      const body = document.createElement('div');
-      body.className = 'body';
-      const h3 = document.createElement('h3');
-      h3.textContent = post.title;
-      const p = document.createElement('p');
-      p.textContent = post.excerpt;
-      const meta = document.createElement('div');
-      meta.className = 'meta';
-      meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
+  const body = document.createElement('div');
+  body.className = 'body';
+  const h3 = document.createElement('h3');
+  h3.textContent = post.title;
+  const p = document.createElement('p');
+  p.textContent = post.excerpt;
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
 
-      body.appendChild(h3);
-      body.appendChild(p);
-      body.appendChild(meta);
+  body.appendChild(h3);
+  body.appendChild(p);
+  body.appendChild(meta);
 
-      postEl.appendChild(body);
-      return postEl;
-    }
+  postEl.appendChild(body);
+  return postEl;
+}
 
-    function renderFeed(){
-      const feed = document.getElementById('feed');
-      feed.innerHTML = '';
-      posts.forEach(p => {
-        const card = createPostCard(p);
-        feed.appendChild(card);
-      });
-    }
+function renderFeed(){
+  const feed = document.getElementById('feed');
+  feed.innerHTML = '';
+  posts.forEach(p => {
+    const card = createPostCard(p);
+    feed.appendChild(card);
+  });
+}
 
-    function renderStatus(){
-      document.getElementById('online-count').textContent = '0';
-      document.getElementById('member-count').textContent = '0';
-    }
+// simulovaný stav serveru
+function renderStatus(){
+  const online = document.getElementById('online-count');
+  const members = document.getElementById('member-count');
 
-    document.addEventListener('DOMContentLoaded', () => {
-      renderFeed();
-      renderStatus();
-      setInterval(renderStatus, 10000);
-    });
-  </script>
+  online.textContent = '0';
+  members.textContent = '0';
+}
 
-</body>
-</html><!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Primus</title>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#eee;display:flex;min-height:100vh}
-    .app{display:flex;flex:1}
-    .sidebar{width:220px;background:#1a1a1a;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
-    .logo-row{display:flex;align-items:center;margin-bottom:2rem}
-    .logo{width:40px;height:40px;border-radius:50%;background:#b26f2a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;margin-right:0.5rem}
-    .brand{font-size:1.2rem;font-weight:bold}
-    .menu{display:flex;flex-direction:column;gap:0.5rem}
-    .menu-item{color:#ccc;text-decoration:none;padding:0.5rem;border-radius:0.5rem;transition:background 0.2s}
-    .menu-item:hover{background:#333;color:#fff}
-    .menu-item.active{background:#b26f2a;color:#fff}
-    .sidebar-footer{margin-top:2rem;font-size:0.75rem;color:#666;display:flex;flex-direction:column;gap:0.2rem}
-    .content{flex:1;display:flex;flex-direction:column}
-    .topbar{background:#1f1f1f;padding:0.75rem 1rem;border-bottom:1px solid #333;text-align:right}
-    .user{color:#ccc}
-    .hero{padding:2rem;text-align:center;background:#222}
-    .hero-logo{font-size:2.5rem;font-weight:bold;color:#b26f2a;margin-bottom:0.5rem}
-    .hero-sub{color:#aaa}
-    .feed{padding:1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
-    .card{background:#1b1b1b;border:1px solid #333;border-radius:0.75rem;padding:1rem}
-    .post .thumb{height:120px;border-radius:0.5rem;margin-bottom:0.5rem}
-    .post .body h3{margin-bottom:0.25rem;font-size:1.1rem}
-    .post .body p{color:#aaa;font-size:0.9rem;margin-bottom:0.5rem}
-    .post .meta{font-size:0.75rem;color:#777;display:flex;justify-content:space-between}
-    .rightbar{width:250px;background:#1a1a1a;padding:1rem;display:flex;flex-direction:column;gap:1rem}
-    .status-card,.socials-card{background:#1b1b1b;border:1px solid #333;border-radius:0.75rem;padding:1rem}
-    .status-line{display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0}
-    .dot{width:12px;height:12px;border-radius:50%;background:#2ecc71}
-    .muted{color:#999;font-size:0.85rem}
-    .small{font-size:0.75rem}
-    .link{color:#b26f2a;text-decoration:none}
-    .socials{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem}
-    .sbtn{padding:0.3rem 0.6rem;border:none;border-radius:0.3rem;cursor:pointer;background:#333;color:#fff}
-    .sbtn.instagram{background:#E1306C}
-    .sbtn.tiktok{background:#000}
-    .sbtn.yt{background:#FF0000}
-    .sbtn.fb{background:#1877F2}
-    .sbtn.dc{background:#5865F2}
-  </style>
-</head>
-<body>
-  <div class="app">
-    <aside class="sidebar"></aside>
-    <main class="content">
-      <header class="topbar"></header>
-      <section class="hero">
-        <div class="hero-banner">
-          <div class="hero-logo">Primus</div>
-          <div class="hero-sub">Ponoř se do hraní s námi!</div>
-        </div>
-      </section>
-      <section class="feed" id="feed"></section>
-    </main>
-    <aside class="rightbar"></aside>
-  </div>
+// inicializace
+document.addEventListener('DOMContentLoaded', () => {
+  renderFeed();
+  renderStatus();
 
-  <script>
-    // jednoduchá data struktura pro články
-    const posts = [
-      { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:2, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:3, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:4, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:5, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
-      { id:6, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
-    ];
+  // aktualizuj status každých 10s (demo)
+  setInterval(renderStatus, 10000);
+});
+</script>
 
-    function createPostCard(post){
-      const postEl = document.createElement('article');
-      postEl.className = 'post card';
-      const thumb = document.createElement('div');
-      thumb.className = 'thumb';
-      thumb.style.background = post.image;
-      postEl.appendChild(thumb);
-      const body = document.createElement('div');
-      body.className = 'body';
-      const h3 = document.createElement('h3');
-      h3.textContent = post.title;
-      const p = document.createElement('p');
-      p.textContent = post.excerpt;
-      const meta = document.createElement('div');
-      meta.className = 'meta';
-      meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
-      body.appendChild(h3);
-      body.appendChild(p);
-      body.appendChild(meta);
-      postEl.appendChild(body);
-      return postEl;
-    }
-
-    function renderFeed(){
-      if (window.location.pathname !== '/') return;
-      const feed = document.getElementById('feed');
-      feed.innerHTML = '';
-      posts.forEach(p => {
-        const card = createPostCard(p);
-        feed.appendChild(card);
-      });
-    }
-
-    function renderStatus(){
-      const online = document.getElementById('online-count');
-      const members = document.getElementById('member-count');
-      online.textContent = '0';
-      members.textContent = '0';
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderFeed();
-      renderStatus();
-      setInterval(renderStatus, 10000);
-      document.querySelectorAll('[data-name]').forEach(el => {
-        const rank = el.textContent;
-        el.style.transition = 'font-size 0.3s';
-        el.addEventListener('mouseover', function() {
-          el.textContent = el.getAttribute('data-name');
-          el.style.fontSize = '1.2em';
-        });
-        el.addEventListener('mouseout', function() {
-          el.textContent = rank;
-          el.style.fontSize = '';
-        });
-      });
-    });
-
-    // vars.js obsah
-    document.querySelector('.sidebar').innerHTML = `
-      <div class="logo-row">
-        <div class="logo">PM</div>
-        <div class="brand">Primus</div>
-      </div>
-      <nav class="menu">
-        <a class="menu-item" href="/">Hlavní Stránka</a>
-        <a class="menu-item" href="/at">AdminTeam</a>
-        <a class="menu-item" href="#">Store</a>
-        <a class="menu-item" href="#">Pravidla</a>
-        <a class="menu-item" href="#">Wiki</a>
-        <a class="menu-item" href="#">Spolupráce</a>
-        <a class="menu-item" href="#">Nábory</a>
-        <a class="menu-item" href="#">Statistiky</a>
-      </nav>
-      <div class="sidebar-footer">
-        <small>© 2025 primuscraft.fun</small>
-        <small>Created by Koťák & MrTomiCZ</small>
-      </div>
-    `;
-    document.querySelector('.topbar').innerHTML = `<div class="user">Nepřihlášen</div>`;
-    document.querySelector('.rightbar').innerHTML = `
-      <div class="card status-card">
-        <h4>STATUS</h4>
-        <div class="status-line">
-          <div class="dot online"></div>
-          <div>
-            <div class="muted">Online:</div>
-            <div id="online-count">—</div>
-            <div class="muted small">mc.primuscraft.fun</div>
-          </div>
-        </div>
-        <hr>
-        <div class="status-line">
-          <div class="icon">👥</div>
-          <div>
-            <div class="muted">Členů:</div>
-            <div id="member-count">—</div>
-            <a class="small link" href="#">Klikni pro připojení</a>
-          </div>
-        </div>
-      </div>
-      <div class="card socials-card">
-        <h4>SOCIÁLNÍ SÍTĚ</h4>
-        <div class="socials">
-          <button class="sbtn instagram">IG</button>
-          <button class="sbtn tiktok">TT</button>
-          <button class="sbtn yt">YT</button>
-          <button class="sbtn fb">FB</button>
-          <button class="sbtn dc">DC</button>
-        </div>
-      </div>
-    `;
-    document.querySelectorAll('.menu-item').forEach(el => {
-      const linkPath = el.getAttribute('href');
-      const currentPath = window.location.pathname;
-      if (linkPath === currentPath) {
-        el.classList.add('active');
-      } else {
-        el.classList.remove('active');
-      }
-    });
-  </script>
 </body>
 </html>
