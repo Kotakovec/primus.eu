@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Primus</title>
+  <style>
+    /* === styles.css === */
+    *{margin:0;padding:0;box-sizing:border-box}body{font-family:sans-serif;background:#111;color:#eee;display:flex;justify-content:center;align-items:center;min-height:100vh}.app{display:grid;grid-template-columns:220px 1fr 250px;grid-template-rows:auto 1fr;gap:10px;width:100%;max-width:1400px;min-height:100vh}.sidebar{background:#1b1b1b;padding:20px;display:flex;flex-direction:column;justify-content:space-between}.sidebar .logo-row{display:flex;align-items:center;margin-bottom:20px}.sidebar .logo{background:#b26f2a;width:40px;height:40px;display:flex;justify-content:center;align-items:center;font-weight:bold;border-radius:10px;margin-right:10px}.sidebar .brand{font-size:1.2em;font-weight:bold}.menu{display:flex;flex-direction:column;gap:10px}.menu-item{color:#ccc;text-decoration:none;padding:8px;border-radius:6px;transition:.2s}.menu-item:hover{background:#333;color:#fff}.menu-item.active{background:#b26f2a;color:#fff}.sidebar-footer{font-size:.7em;color:#666;margin-top:20px}.content{display:flex;flex-direction:column}.topbar{background:#1f1f1f;padding:10px 20px;display:flex;justify-content:flex-end;align-items:center}.user{color:#b26f2a;font-weight:bold}.hero{padding:30px;text-align:center;background:#222}.hero-banner{max-width:600px;margin:auto}.hero-logo{font-size:3em;font-weight:bold;color:#b26f2a;margin-bottom:10px}.hero-sub{font-size:1.2em;color:#aaa}.feed{padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px}.card{background:#1b1b1b;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.3)}.post .thumb{height:150px;border-radius:8px;margin-bottom:10px;background:#333}.post .body h3{margin-bottom:8px;font-size:1.2em}.post .body p{color:#aaa;margin-bottom:8px}.post .meta{display:flex;justify-content:space-between;font-size:.8em;color:#777}.rightbar{background:#1b1b1b;padding:20px;display:flex;flex-direction:column;gap:20px}.status-card .status-line{display:flex;align-items:center;gap:10px;margin:10px 0}.status-card .dot{width:14px;height:14px;border-radius:50%}.dot.online{background:#3c3}.dot.offline{background:#c33}.muted{color:#777;font-size:.9em}.small{font-size:.8em}.link{color:#b26f2a;text-decoration:none;cursor:pointer}.socials{display:flex;flex-wrap:wrap;gap:6px}.sbtn{background:#333;color:#fff;border:none;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:.8em;transition:.2s}.sbtn:hover{background:#b26f2a}.instagram{background:#e1306c}.tiktok{background:#000}.yt{background:#f00}.fb{background:#1877f2}.dc{background:#5865f2}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <!-- neboj se je to v JS -->
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div class="user">Nepřihlášen</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-banner">
+          <div class="hero-logo">Primus</div>
+          <div class="hero-sub">Ponoř se do hraní s námi!</div>
+        </div>
+      </section>
+
+      <section class="feed" id="feed">
+      </section>
+    </main>
+
+    <aside class="rightbar"></aside>
+  </div>
+
+  <script>
+    // === main.js ===
+    const posts = [
+      { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
+    ];
+
+    function createPostCard(post){
+      const postEl = document.createElement('article');
+      postEl.className = 'post card';
+
+      const thumb = document.createElement('div');
+      thumb.className = 'thumb';
+      thumb.style.background = post.image;
+      postEl.appendChild(thumb);
+
+      const body = document.createElement('div');
+      body.className = 'body';
+      const h3 = document.createElement('h3');
+      h3.textContent = post.title;
+      const p = document.createElement('p');
+      p.textContent = post.excerpt;
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
+
+      body.appendChild(h3);
+      body.appendChild(p);
+      body.appendChild(meta);
+
+      postEl.appendChild(body);
+      return postEl;
+    }
+
+    function renderFeed(){
+      if (window.location.pathname !== '/') return;
+      const feed = document.getElementById('feed');
+      feed.innerHTML = '';
+      posts.forEach(p => {
+        const card = createPostCard(p);
+        feed.appendChild(card);
+      });
+    }
+
+    function renderStatus(){
+      const online = document.getElementById('online-count');
+      const members = document.getElementById('member-count');
+
+      online.textContent = '0';
+      members.textContent = '0';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeed();
+      renderStatus();
+
+      setInterval(renderStatus, 10000);
+
+      document.querySelectorAll('[data-name]').forEach(el => {
+        const rank = el.textContent;
+        el.style.transition = 'font-size 0.3s';
+
+        el.addEventListener('mouseover', function() {
+          el.textContent = el.getAttribute('data-name');
+          el.style.fontSize = '1.2em';
+        });
+        el.addEventListener('mouseout', function() {
+          el.textContent = rank;
+          el.style.fontSize = '';
+        });
+      });
+    });
+  </script>
+
+  <script>
+    // === vars.js ===
+    document.querySelector('.sidebar').innerHTML = `
+      <div class="logo-row">
+        <div class="logo">PM</div>
+        <div class="brand">Primus</div>
+      </div>
+
+      <nav class="menu">
+        <a class="menu-item" href="/">Hlavní Stránka</a>
+        <a class="menu-item" href="/at">AdminTeam</a>
+        <a class="menu-item" href="#">Store</a>
+        <a class="menu-item" href="#">Pravidla</a>
+        <a class="menu-item" href="#">Wiki</a>
+        <a class="menu-item" href="#">Spolupráce</a>
+        <a class="menu-item" href="#">Nábory</a>
+        <a class="menu-item" href="#">Statistiky</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <small>© 2025 primuscraft.fun</small>
+        <small>Created by Koťák & MrTomiCZ</small>
+      </div>
+    `;
+    document.querySelector('.topbar').innerHTML = `
+        <div class="user">Nepřihlášen</div>
+    `;
+    document.querySelector('.rightbar').innerHTML = `
+        <div class="card status-card">
+        <h4>STATUS</h4>
+        <div class="status-line">
+          <div class="dot online"></div>
+          <div>
+            <div class="muted">Online:</div>
+            <div id="online-count">—</div>
+            <div class="muted small">mc.primuscraft.fun</div>
+          </div>
+        </div>
+        <hr>
+        <div class="status-line">
+          <div class="icon">👥</div>
+          <div>
+            <div class="muted">Členů:</div>
+            <div id="member-count">—</div>
+            <a class="small link" href="#">Klikni pro připojení</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card socials-card">
+        <h4>SOCIÁLNÍ SÍTĚ</h4>
+        <div class="socials">
+          <button class="sbtn instagram">IG</button>
+          <button class="sbtn tiktok">TT</button>
+          <button class="sbtn yt">YT</button>
+          <button class="sbtn fb">FB</button>
+          <button class="sbtn dc">DC</button>
+        </div>
+      </div>
+    `;
+
+    document.querySelectorAll('.menu-item').forEach(el => {
+      const linkPath = el.getAttribute('href');
+      const currentPath = window.location.pathname;
+
+      if (linkPath === currentPath) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
