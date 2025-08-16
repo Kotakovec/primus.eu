@@ -21,7 +21,7 @@ function createPostCard(post){
   p.textContent = post.excerpt;
   const meta = document.createElement('div');
   meta.className = 'meta';
-  meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
+  meta.innerHTML = `<span>❤️ 0</span><span>${post.date}</span>`;
 
   body.appendChild(h3);
   body.appendChild(p);
