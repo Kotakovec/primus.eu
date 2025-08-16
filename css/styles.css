@@ -498,17 +498,18 @@ body {
 }
 
 .odznacek {
-  position: absolute;
-  top: -15%;
-  right: -40px;
-  background: #f0c000;
-  color: white;
-  font-weight: bold;
-  padding: 5px 50px;
-  text-align: center;
-  transform: rotate(45deg) translate(50%);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  font-family: sans-serif;
+    position: absolute;
+    top: -15%;
+    right: -5%;
+    left: 20%;
+    background: #f0c000;
+    color: white;
+    font-weight: bold;
+    padding: 5px 50px;
+    text-align: center;
+    transform: rotate(45deg) translateX(3em);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-family: sans-serif;
 }
 
 /* small screens */
