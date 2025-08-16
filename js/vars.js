@@ -54,16 +54,6 @@ document.querySelector('.rightbar').innerHTML = `
         </div>
       </div>
 `;
-document.querySelector('.rightbar').innerHTML = `
-      <div class="card socials-card">
-        <h4>SOCIÁLNÍ SÍTĚ</h4>
-        <div class="socials">
-          <button class="sbtn instagram">IG</button>
-          <button class="sbtn tiktok">TT</button>
-          <button class="sbtn dc">DC</button>
-        </div>
-      </div>
-`;
 
 document.querySelectorAll('.menu-item').forEach(el => {
   const linkPath = el.getAttribute('href');
