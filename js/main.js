@@ -60,14 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-name]').forEach(el => {
     const rank = el.textContent;
-    // Add transition style for smooth effect
-    el.style.transition = 'all 0.3s ease';
+    // Add transition for smooth font-size change
+    el.style.transition = 'font-size 0.3s';
 
     el.addEventListener('mouseover', function() {
       el.textContent = el.getAttribute('data-name');
+      el.style.fontSize = '1.2em';
     });
     el.addEventListener('mouseout', function() {
       el.textContent = rank;
+      el.style.fontSize = '';
     });
   });
 });
