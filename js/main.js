@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
       statusCZ = 'Nerušit';
     } else if (status === 'idle') {
       statusCZ = 'Pryč';
+    } else {
+      alert('Chyba při načítání stavu: ' + status);
     }
       
 
