@@ -518,6 +518,10 @@ body {
   margin-top: auto;
 }
 
+.smallend {
+  color: var(--accent);
+}
+
 /* small screens */
 @media (max-width: 1100px) {
   .app {
