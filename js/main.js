@@ -73,7 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   document.querySelectorAll('[data-dcid]').forEach(el => {
-    const resp = await fetch('https://corsproxy.io/?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'));
+    const resp = await fetch('https://corsproxy.io/?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'), {
+      method: 'GET',
+      headers: {
+        'Host': 'primuscraft.fun'
+      }
+    });
     const status = await resp.text();
     let statusCZ;
     if (status === 'online') {
