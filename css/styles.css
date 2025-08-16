@@ -310,34 +310,6 @@ body {
   cursor: pointer;
   display: inline-block;
 }
-.sbtn.yt {
-  background: none;
-  background-image: url("https://customersfiles.frcreator.eu/primus/images/youtube.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 25%;
-  border: none;
-  text-indent: -9999px;
-  cursor: pointer;
-  display: inline-block;
-}
-.sbtn.fb {
-  background: none;
-  background-image: url("https://customersfiles.frcreator.eu/primus/images/facebook.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 25%;
-  border: none;
-  text-indent: -9999px;
-  cursor: pointer;
-  display: inline-block;
-}
 .sbtn.dc {
   background: none;
   background-image: url("https://customersfiles.frcreator.eu/primus/images/discord.png");
