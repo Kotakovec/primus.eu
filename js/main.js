@@ -1,6 +1,7 @@
 // jednoduchá data struktura pro články (nahraď reálnými daty)
 const posts = [
-  { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
+  { id:1, title:"SERVER SE PŘIPRAVUJE", date:"15.8.2025", excerpt:"Připravujeme pro vás server Primus - Next Level Minecraftu", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"},
+  { id:2, title:"TEST", date:"16.8.2025", excerpt:"test pro kotaka", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
 ];
 
 function createPostCard(post){
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   document.querySelectorAll('[data-dcid]').forEach(async el => {
-    const resp = await fetch('https://corsproxy.io/?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'), {
+    const resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getstatus?who=' + el.getAttribute('data-dcid'), {
       method: 'GET',
       headers: {
         'Host': 'primuscraft.fun'
