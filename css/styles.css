@@ -541,6 +541,10 @@ body {
   white-space: nowrap;
 }
 
+.status-card {
+  bottom:0;
+}
+
 /* small screens */
 @media (max-width: 1100px) {
   .app {
