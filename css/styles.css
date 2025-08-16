@@ -431,6 +431,7 @@ body {
 }
 
 .at-name {
+  display:inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -438,6 +439,15 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
+}
+
+[data-dcid] {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .at-role {
@@ -498,26 +508,18 @@ body {
 }
 
 .odznacek {
-    position: absolute;
-    top: -15%;
-    right: -5%;
-    left: 20%;
-    background: #f0c000;
-    color: white;
-    font-weight: bold;
-    padding: 5px 50px;
-    text-align: center;
-    transform: rotate(45deg) translateX(4em);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    font-family: sans-serif;
-}
-[data-dcid] {
-  display: inline-block;
-  padding: 2px 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  color: var(--muted);
-  font-size: 12px;
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  left: 20%;
+  background: #f0c000;
+  color: white;
+  font-weight: bold;
+  padding: 5px 50px;
+  text-align: center;
+  transform: rotate(45deg) translateX(4em);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-family: sans-serif;
 }
 
 /* small screens */
