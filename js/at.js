@@ -85,7 +85,10 @@ function renderStaff(data, querySelector) {
     container.appendChild(title);
     container.appendChild(document.createElement("br"));
 
-    // member cards
+    // create a single row per section
+    const row = document.createElement("div");
+    row.className = "at-row";
+
     members.forEach(member => {
       const card = document.createElement("div");
       card.className = "at-card";
@@ -123,10 +126,13 @@ function renderStaff(data, querySelector) {
         card.appendChild(badge);
       }
 
-      container.appendChild(card);
+      row.appendChild(card);
     });
+
+    container.appendChild(row);
   }
 }
+
 
 // render into #staff-container
 renderStaff(staffData, ".at-list");
