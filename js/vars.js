@@ -68,10 +68,10 @@ document.querySelectorAll('.menu-item').forEach(el => {
   }
 });
 
-let link = document.querySelector("link[rel~='icon']");
+/*let link = document.querySelector("link[rel~='icon']");
 if (!link) {
   link = document.createElement('link');
   link.rel = 'icon';
   document.head.appendChild(link);
 }
-link.href = "/images/favicon.png";
+link.href = "/images/favicon.png";*/
