@@ -529,6 +529,10 @@ body {
   color: var(--accent);
 }
 
+.rules {
+  text-align: center;
+}
+
 /* small screens */
 @media (max-width: 1100px) {
   .app {
