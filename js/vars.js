@@ -1,6 +1,7 @@
 document.querySelector('.sidebar').innerHTML = `
       <div class="logo-row">
-        <div class="logo">PM</div>
+        <!--<div class="logo">PM</div>-->
+        <img src="/images/favicon.png" alt="logo" />
         <div class="brand">Primus</div>
       </div>
 
@@ -66,3 +67,11 @@ document.querySelectorAll('.menu-item').forEach(el => {
     el.classList.remove('active');
   }
 });
+
+let link = document.querySelector("link[rel~='icon']");
+if (!link) {
+  link = document.createElement('link');
+  link.rel = 'icon';
+  document.head.appendChild(link);
+}
+link.href = "/images/favicon.png";
