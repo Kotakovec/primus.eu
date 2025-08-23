@@ -3,7 +3,6 @@ const staffData = {
     {
       "status": "on",
       "avatar": "/images/tenyx.png",
-      "alt": "Tenyx",
       "name": "Tenyx",
       "realname": "Tomáš",
       "role": "Majitel",
@@ -13,7 +12,6 @@ const staffData = {
     {
       "status": "on",
       "avatar": "/images/kotak.png",
-      "alt": "kotak logo",
       "name": "Koťák",
       "realname": "Jakub",
       "role": "Šéf Projektu",
@@ -25,7 +23,6 @@ const staffData = {
     {
       "status": "off",
       "avatar": "/images/juuaann74.png",
-      "alt": "juuaann74 logo",
       "name": "Juuaann74",
       "realname": "???",
       "role": "Server Developer",
@@ -35,7 +32,6 @@ const staffData = {
     {
       "status": "off",
       "avatar": "https://frdomains.eu/images/mrtomi.png",
-      "alt": "mrtomicz logo",
       "name": "MrTomiCZ",
       "realname": "Tomáš",
       "role": "Web developer",
@@ -47,7 +43,6 @@ const staffData = {
     {
       "status": "off",
       "avatar": "/images/kajinaa.png",
-      "alt": "kajina logo",
       "name": "kajinaa.",
       "realname": "Karolína",
       "role": "Technička",
@@ -59,7 +54,6 @@ const staffData = {
     {
       "status": "off",
       "avatar": "/images/skyminercz.png",
-      "alt": "skyminercz logo",
       "name": "SkyMinerCz",
       "realname": "???",
       "role": "Helper",
@@ -69,7 +63,6 @@ const staffData = {
     {
       "status": "off",
       "avatar": "/images/skyminercz.png",
-      "alt": "s8z3 logo",
       "name": "s8z3",
       "realname": "???",
       "role": "Zkušební helper",
@@ -103,7 +96,7 @@ function renderStaff(data, querySelector) {
 
       const img = document.createElement("img");
       img.src = member.avatar;
-      img.alt = member.alt;
+      img.alt = member.name + " logo";
       img.className = "at-avatar";
       card.appendChild(img);
 
