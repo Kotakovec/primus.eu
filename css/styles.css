@@ -19,6 +19,7 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   background: linear-gradient(180deg, #5b3f3a 0%, #2b1a18 100%);
+  background-attachment: fixed;
   color: #fff;
 }
 .app {
