@@ -368,9 +368,10 @@ body {
 }
 
 .at-list {
-  position: absolute;
-  display: flex;
-  justify-content: center;
+  /*position: absolute;*/
+  left:50%;
+  transform: translate(-50%,0);
+  align-items: center;
 }
 
 .at-title {
