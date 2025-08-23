@@ -373,6 +373,12 @@ body {
   transform: translate(-50%,0);
 }
 
+.at-list {
+  position: absolute;
+  left:50%;
+  transform: translate(-50%,0);
+}
+
 .at-title {
   font-size: 24px;
   font-weight: bold;
