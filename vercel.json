@@ -2,7 +2,7 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/at", "status": 200, "dest": "/pages/ateam.html" },
-    { "src": "/rules", "status": 200, "dest": "/pages/pravidla.html" },
+    { "src": "/rules", "status": 200, "dest": "/pages/rules.html" },
     { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
   ]
 }
