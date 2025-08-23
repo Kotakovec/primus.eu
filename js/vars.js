@@ -1,6 +1,7 @@
 document.querySelector('.sidebar').innerHTML = `
       <div class="logo-row">
-        <div class="logo"><img src="/images/favicon.png" alt="logo" /></div>
+        <!--<div class="logo">PM</div>-->
+        <img src="/images/favicon.png" alt="logo" style="width: 25%;" />
         <div class="brand">Primus</div>
       </div>
 
