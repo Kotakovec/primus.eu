@@ -62,7 +62,7 @@ const staffData = {
     },
     {
       "status": "off",
-      "avatar": getAvatar("557583720727576579"),
+      "avatar": await getAvatar("557583720727576579"),
       "name": "s8z3",
       "realname": "Dominik",
       "role": "Zkušební helper",
@@ -141,6 +141,7 @@ async function getAvatar(memberId) {
         'Host': 'primuscraft.fun'
       }
     });
+    return await resp.text();
 }
 
 
