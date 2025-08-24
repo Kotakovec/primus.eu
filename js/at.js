@@ -62,9 +62,9 @@ const staffData = {
     },
     {
       "status": "off",
-      "avatar": "/images/skyminercz.png",
+      "avatar": getAvatar("557583720727576579"),
       "name": "s8z3",
-      "realname": "???",
+      "realname": "Dominik",
       "role": "Zkušební helper",
       "social": "bude pridano",
       "badge": null
@@ -131,6 +131,16 @@ function renderStaff(data, querySelector) {
 
     container.appendChild(row);
   }
+}
+
+function getAvatar(memberId) {
+    const cacheBuster = Date.now();
+    const resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getavatar?who=' + el.getAttribute('data-dcid')+"&buster="+cacheBuster, {
+      method: 'GET',
+      headers: {
+        'Host': 'primuscraft.fun'
+      }
+    });
 }
 
 
