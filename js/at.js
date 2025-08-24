@@ -1,5 +1,7 @@
 async function buildStaffData() {
     const s8z3avatar = await getAvatar("557583720727576579");
+    const mrtomicz = await getAvatar("818109259048157226");
+    const kajina = await getAvatar("818109259048157226");
 
 
     return {
@@ -35,7 +37,7 @@ async function buildStaffData() {
         },
         {
           "status": "off",
-          "avatar": "https://frdomains.eu/images/mrtomi.png",
+          "avatar": mrtomicz,
           "name": "MrTomiCZ",
           "realname": "Tomáš",
           "role": "Web developer",
@@ -79,7 +81,7 @@ async function buildStaffData() {
 
 function renderStaff(data, querySelector) {
   const container = document.querySelector(querySelector);
-  container.innerHTML = ""; // clear previous render
+  container.innerHTML = "Prosím počkejte, načítání. Pokud se tato stránka načítá dlouho (déle než 20s) zkuste znovu načíst stránku."; // clear previous render
 
   for (const [section, members] of Object.entries(data)) {
     // section title
