@@ -88,6 +88,7 @@ function renderStaff(data, querySelector) {
     const title = document.createElement("div");
     title.className = "at-title";
     title.textContent = section;
+    container.innerHTML = "";
     container.appendChild(document.createElement("br"));
     container.appendChild(title);
     container.appendChild(document.createElement("br"));
@@ -142,12 +143,17 @@ function renderStaff(data, querySelector) {
 
 async function getAvatar(memberId) {
     const cacheBuster = Date.now();
-    const resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getavatar?who=' + memberId+"&buster="+cacheBuster, {
-      method: 'GET',
-      headers: {
-        'Host': 'primuscraft.fun'
-      }
-    });
+    let resp;
+    try {
+        resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getavatar?who=' + memberId+"&buster="+cacheBuster, {
+          method: 'GET',
+          headers: {
+            'Host': 'primuscraft.fun'
+          }
+        });
+    } catch {
+        return ""
+    }
     return await resp.text();
 }
 
