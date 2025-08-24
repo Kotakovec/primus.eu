@@ -1,8 +1,8 @@
 document.querySelector('.sidebar').innerHTML = `
       <div class="logo-row">
         <!--<div class="logo">PM</div>-->
-        <img src="/images/favicon.png" alt="logo" style="width: 25%;" />
-        <div class="brand">Primus</div>
+        <img src="/images/favicon.png" alt="logo" style="width: 75%; margin-left:auto; margin-right: auto;" />
+        <!--<div class="brand">Primus</div>-->
       </div>
 
       <nav class="menu">
