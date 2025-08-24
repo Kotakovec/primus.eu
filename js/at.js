@@ -145,7 +145,7 @@ async function getAvatar(memberId) {
     const cacheBuster = Date.now();
     let resp;
     try {
-        resp = await fetch('https://api.allorigins.win/raw?url=http://46.247.108.145:2503/getavatar?who=' + memberId+"&buster="+cacheBuster, {
+        resp = await fetch('/api/getavatar?who=' + memberId+"&buster="+cacheBuster, {
           method: 'GET',
           headers: {
             'Host': 'primuscraft.fun'
