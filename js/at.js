@@ -1,81 +1,81 @@
-let s8z3avatar;
-(async () => {
-    s8z3avatar = await getAvatar("557583720727576579");
-})();
+async function buildStaffData() {
+    const s8z3avatar = await getAvatar("557583720727576579");
 
-const staffData = {
-  "Vedení": [
-    {
-      "status": "on",
-      "avatar": "/images/tenyx.png",
-      "name": "Tenyx",
-      "realname": "Tomáš",
-      "role": "Majitel",
-      "social": "bude pridano",
-      "badge": null
-    },
-    {
-      "status": "on",
-      "avatar": "/images/kotak.png",
-      "name": "Koťák",
-      "realname": "Jakub",
-      "role": "Šéf Projektu",
-      "social": "bude pridano",
-      "badge": "Přes den spí"
-    }
-  ],
-  "Developeři": [
-    {
-      "status": "off",
-      "avatar": "/images/juuaann74.png",
-      "name": "Juuaann74",
-      "realname": "???",
-      "role": "Server Developer",
-      "social": "bude pridano",
-      "badge": null
-    },
-    {
-      "status": "off",
-      "avatar": "https://frdomains.eu/images/mrtomi.png",
-      "name": "MrTomiCZ",
-      "realname": "Tomáš",
-      "role": "Web developer",
-      "social": "bude pridano",
-      "badge": "Dovolená"
-    }
-  ],
-  "Technici": [
-    {
-      "status": "off",
-      "avatar": "/images/kajinaa.png",
-      "name": "kajinaa.",
-      "realname": "Karolína",
-      "role": "Technička",
-      "social": "bude pridano",
-      "badge": null
-    }
-  ],
-  "Podpora": [
-    {
-      "status": "off",
-      "avatar": "/images/skyminercz.png",
-      "name": "SkyMinerCz",
-      "realname": "???",
-      "role": "Helper",
-      "social": "bude pridano",
-      "badge": null
-    },
-    {
-      "status": "off",
-      "avatar": s8z3avatar,
-      "name": "s8z3",
-      "realname": "Dominik",
-      "role": "Zkušební helper",
-      "social": "bude pridano",
-      "badge": null
-    }
-  ]
-};
+
+    return {
+      "Vedení": [
+        {
+          "status": "on",
+          "avatar": "/images/tenyx.png",
+          "name": "Tenyx",
+          "realname": "Tomáš",
+          "role": "Majitel",
+          "social": "bude pridano",
+          "badge": null
+        },
+        {
+          "status": "on",
+          "avatar": "/images/kotak.png",
+          "name": "Koťák",
+          "realname": "Jakub",
+          "role": "Šéf Projektu",
+          "social": "bude pridano",
+          "badge": "Přes den spí"
+        }
+      ],
+      "Developeři": [
+        {
+          "status": "off",
+          "avatar": "/images/juuaann74.png",
+          "name": "Juuaann74",
+          "realname": "???",
+          "role": "Server Developer",
+          "social": "bude pridano",
+          "badge": null
+        },
+        {
+          "status": "off",
+          "avatar": "https://frdomains.eu/images/mrtomi.png",
+          "name": "MrTomiCZ",
+          "realname": "Tomáš",
+          "role": "Web developer",
+          "social": "bude pridano",
+          "badge": "Dovolená"
+        }
+      ],
+      "Technici": [
+        {
+          "status": "off",
+          "avatar": "/images/kajinaa.png",
+          "name": "kajinaa.",
+          "realname": "Karolína",
+          "role": "Technička",
+          "social": "bude pridano",
+          "badge": null
+        }
+      ],
+      "Podpora": [
+        {
+          "status": "off",
+          "avatar": "/images/skyminercz.png",
+          "name": "SkyMinerCz",
+          "realname": "???",
+          "role": "Helper",
+          "social": "bude pridano",
+          "badge": null
+        },
+        {
+          "status": "off",
+          "avatar": s8z3avatar,
+          "name": "s8z3",
+          "realname": "Dominik",
+          "role": "Zkušební helper",
+          "social": "bude pridano",
+          "badge": null
+        }
+      ]
+    };
+}
 
 function renderStaff(data, querySelector) {
   const container = document.querySelector(querySelector);
@@ -151,4 +151,7 @@ async function getAvatar(memberId) {
 
 
 // render into #staff-container
-renderStaff(staffData, ".at-list");
+(async () => {
+  const staffData = await buildStaffData();
+  renderStaff(staffData, ".at-list");
+})();
