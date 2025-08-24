@@ -81,14 +81,13 @@ async function buildStaffData() {
 
 function renderStaff(data, querySelector) {
   const container = document.querySelector(querySelector);
-  container.innerHTML = "Prosím počkejte, načítání. Pokud se tato stránka načítá dlouho (déle než 20s) zkuste znovu načíst stránku."; // clear previous render
+  container.innerHTML = ""; // clear previous render
 
   for (const [section, members] of Object.entries(data)) {
     // section title
     const title = document.createElement("div");
     title.className = "at-title";
     title.textContent = section;
-    container.innerHTML = "";
     container.appendChild(document.createElement("br"));
     container.appendChild(title);
     container.appendChild(document.createElement("br"));
@@ -143,18 +142,16 @@ function renderStaff(data, querySelector) {
 
 async function getAvatar(memberId) {
     const cacheBuster = Date.now();
-    let resp;
     try {
-        resp = await fetch('/api/getavatar?who=' + memberId+"&buster="+cacheBuster, {
-          method: 'GET',
-          headers: {
-            'Host': 'primuscraft.fun'
-          }
+        const resp = await fetch('/api/getavatar?who=' + memberId+"&buster="+cacheBuster, {
+          method: 'GET'
         });
+        if (!resp.ok) return "/images/404img.jpg";
+        return await resp.text();
     } catch {
-        return ""
+        console.error("Failed to fetch avatar:", memberId, err);
+        return "/images/404img.jpg";
     }
-    return await resp.text();
 }
 
 
