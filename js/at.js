@@ -138,6 +138,9 @@ function renderStaff(data, querySelector) {
 
     container.appendChild(row);
   }
+  const skrypt = document.createElement("script");
+  skrypt.src = "/js/main.js";
+  document.body.appendChild(skrypt);
 }
 
 async function getAvatar(memberId) {
