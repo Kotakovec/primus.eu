@@ -1,3 +1,8 @@
+let s8z3avatar;
+(async () => {
+    s8z3avatar = await getAvatar("557583720727576579");
+})();
+
 const staffData = {
   "Vedení": [
     {
@@ -62,7 +67,7 @@ const staffData = {
     },
     {
       "status": "off",
-      "avatar": await getAvatar("557583720727576579"),
+      "avatar": s8z3avatar,
       "name": "s8z3",
       "realname": "Dominik",
       "role": "Zkušební helper",
