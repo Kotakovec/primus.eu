@@ -53,7 +53,7 @@ function renderStatus(){
 }
 
 // inicializace
-document.addEventListener('DOMContentLoaded', () => {
+//document.addEventListener('DOMContentLoaded', () => {
   renderFeed();
   renderStatus();
 
@@ -100,4 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
     el.innerHTML = statusCZ;
     el.classList.add(status);
   });
-});
+//});
