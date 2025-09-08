@@ -2,9 +2,12 @@
 let posts = [
   { id:1, title:"Načítání", date:"15.8.2025", excerpt:"Probíhá načítání postů", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
 ];
-const pisatsnajifetch = await fetch('/getposts');
-const pists = await pisatsnajifetch.json();
-posts = pists;
+(async () => {
+  const pisatsnajifetch = await fetch('/getposts');
+  const pists = await pisatsnajifetch.json();
+  posts = pists;
+  renderFeed();
+})();
 
 function createPostCard(post){
   const postEl = document.createElement('article');
@@ -56,7 +59,6 @@ function renderStatus(){
 
 // inicializace
 //document.addEventListener('DOMContentLoaded', () => {
-  renderFeed();
   renderStatus();
 
   // aktualizuj status každých 10s (demo)
@@ -102,4 +104,5 @@ function renderStatus(){
     el.innerHTML = statusCZ;
     el.classList.add(status);
   });
+
 //});
