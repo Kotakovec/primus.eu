@@ -25,54 +25,158 @@
       </section>
 
       <section class="rules">
-          (verze 1.0 – Globální pravidla / A-Team Edition)
+          <div class="at-title">📖 Primus Wiki – Survival Server</div>
 
-          <div class="at-title">1. Úvodní slovo</div>
+          Vítej na wiki serveru Primus.eu!
+          Tady najdeš kompletní přehled příkazů, jejich použití a funkce.
+          ⚠️ Poznámka: Nemusí být uvedeno všechno, na něco jsme mohli zapomenout.
 
-          Vítejte na Primus.eu – herním projektu, který spojuje více serverů a herních módů do jednoho celku.
-          Naším cílem je nabídnout hráčům:
-          stabilní a férové prostředí,
-          profesionální přístup administrace,
-          jedinečný komunitní zážitek.
-          Pravidla nejsou jen soupis zákazů, ale představují filozofii celého projektu. Chceme, aby se zde hráči cítili bezpečně, respektovaně a měli možnost svobodně rozvíjet své nápady. Od A-Teamu očekáváme vysokou úroveň profesionality, férovosti a ochoty pomoci.
-          Dodržováním těchto pravidel přispíváš k tomu, že Primus.eu není jen další Minecraft server, ale komunita, kam se lidé rádi vrací.
+          <div class="at-title">🔧 Základní příkazy hráče</div>
 
-          <div class="at-title">2. Obecná pravidla pro hráče</div>
+          /pay <hráč> <částka>
 
-          Platí na všech serverech projektu (Survival, Skyblock, Lobby, eventy aj.):
-          Respektuj ostatní
-          Každý hráč je zde proto, aby si užil hru.
-          Respektuj ostatní, vyvaruj se urážek, provokací či osobních útoků.
-          Vulgární, rasistické, sexistické či jinak nevhodné projevy jsou zakázány.<br><br>
+          Pošli peníze jinému hráči. Hodí se pro tipy, spolupráci nebo nákup od kamarádů.
 
-          Férová hra
-          Žádný griefing ani krádeže – i když jde o survival, férovost je základ.
-          Zákaz ničení staveb, kradení itemů a obtěžování ostatních hráčů.
-          Pokud hráč nemá rezidenci/ochranu, A-Team neřeší ztrátu věcí – ochrana je zodpovědnost hráče.<br><br>
+          /tpa <hráč>
 
-          Ochrana majetku
-          Každý hráč má možnost chránit svůj prostor pomocí rezidencí či jiných ochranných systémů.
-          Pokud hráč nechrání svůj prostor, přijímá riziko ztráty.
-          Rezidence je důkazem vlastnictví a jediným zárukou zásahu A-Teamu.<br><br>
+          Pošli žádost o teleport ke konkrétnímu hráči.
 
-          Zákaz cheatů a nepovolených modifikací
-          Zakázané: X-Ray, hack klienti, fly hacky, autoclicker, baritone, speedhacky atd.
-          Povolené: OptiFine, Shadery, LabyMod, minimapy (bez zobrazení hráčů a mobů).<br><br>
+          /tpaccept
 
-          Ekonomika a obchodování
-          Respektuj herní ekonomiku.
-          Podvody při obchodování (např. 'vyměním → nic nedám') jsou zakázány.
-          Jakýkoli pokus obejít systém (dupe, bug abuse) je důvod k trestu.<br><br>
+          Přijmi žádost o teleport od jiného hráče.
 
-          Chat a komunikace
-          Zakázaný je spam, flood, nadměrný CAPS LOCK, trolling.
-          Reklama na jiné servery či komunity je bez výjimky ban.
-          Sdílení nevhodného obsahu (pornografie, viry, phishing, politika, extrémismus) je přísně zakázáno.<br><br>
+          /rtp
 
-          Odpovědnost a chování
-          Každý hráč svou aktivitou přispívá k atmosféře.
-          Hraj tak, aby ses bavil ty i ostatní.
-          Pokud máš problém, řeš ho slušně a konstruktivně.
+          Náhodný teleport po mapě. Skvělý způsob, jak objevovat neznámé oblasti nebo hledat vzácné suroviny.
+
+          /rewards
+
+          Otevři denní odměny. Každý den můžeš získat peníze, klíče, suroviny nebo speciální itemy.
+
+          /menu
+
+          Hlavní herní menu – zjistíš informace o účtu, odměnách a akcích.
+
+          /lobby
+
+          Návrat do lobby.
+
+          /msg <hráč> <zpráva>
+
+          Soukromá zpráva mezi hráči.
+
+          /ah
+          
+          Otevři aukční dům – prodej a nákup vzácných předmětů mezi hráči.
+
+          /ah sell <částka>
+
+          Nastaví cenu předmětu, který chceš prodat. Po koupi předmětu jiným hráčem se peníze přičtou na tvůj účet.
+
+          /trade <hráč>
+
+          Obchoduj přímo s hráčem bez aukčního domu.
+
+          /shop
+
+          Otevři obchodní GUI, nakupuj nebo prodávej zboží. Perfektní pro získání surovin a vybavení.
+
+          /vote
+
+          Hlasování pro server – získáš peníze, klíče a speciální odměny.
+
+          /res select vert
+
+          Rozšíření výběru při tvorbě rezidence na výšku 0–256 bloků.
+
+          /res expand <číslo>
+
+          Rozšíření výběru rezidence směrem, kam koukáš.
+
+          /res create <název>
+
+          Vytvoření residence s unikátním názvem.
+
+          /res tp <název>
+
+          Teleport do konkrétní residence.
+
+          /res set <hráč> trusted
+
+          Přidání hráče jako důvěryhodného do residence.
+
+          /pwarp set <jméno>
+
+          Vytvoření vlastního warpu pro rychlý přesun.
+
+          /pwarp <jméno>
+
+          Teleport na vlastní warp.
+
+          /marriage propose <hráč>
+
+          Nabídka zasnoubení jinému hráči.
+
+          /marriage accept
+
+          Potvrzení svatby a aktivace bonusů, speciálního chatu a roleplay.
+
+          /minions
+
+          Správa minionů, kteří tě podporují při těžbě a přinášejí odměny.
+
+          /jobs browse
+
+          Zobrazení všech dostupných prací.
+
+          /jobs join <práce>
+
+          Přidání se do konkrétní práce.
+
+          /jobs leave <práce>
+
+          Opustíš práci, kterou jsi měl.
+
+          /jobs stats
+
+          Kontrola statistik práce a vydělaných odměn.
+
+          /sit
+
+          Sezení pro roleplay a dekoraci.
+
+          /brew
+
+          Výroba alkoholu a speciálních nápojů. Pozor na přešvihnutí kvality – efekty motání hlavy, zpomalení.
+
+          /skills
+
+          Zobrazení herních skillů a pokroku hráče.
+
+          /spawn
+
+          Teleport na spawn.
+
+          /afk
+
+          Aktivace AFK režimu na spawnu, kde získáváš pasivně peníze a odměny.
+
+          /chatgames
+
+          Občas se objeví otázka nebo úkol v chatu. Správná odpověď = peníze, klíče, odměny.
+
+          /evenmorefish
+
+          Rybářské závody – pokud je na serveru min. 10 hráčů, spustí se závod. Vítěz získá peníze, speciální odměny a respekt.
+
+          /customenchant
+
+          Při enchantování předmětu je šance získat unikátní enchant, který jinde nenajdeš.
+
+          /skin set <jméno>
+
+          Změna skinu hráče bez nutnosti mít skin na účtu Minecraft.
+
 
           <div class="at-title">3. Pravidla pro A-Team (staff, helper, moderátor, admin, owner)</div>
 
