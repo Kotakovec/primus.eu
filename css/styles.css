@@ -573,3 +573,9 @@ body {
   font-weight: bold;
   font-size: 1em;
 }
+.voicechat-wiki {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1,5em;
+}
