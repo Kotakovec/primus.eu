@@ -4,7 +4,8 @@
     { "src": "/at", "status": 200, "dest": "/pages/ateam.html" },
     { "src": "/rules", "status": 200, "dest": "/pages/rules.html" },
     { "src": "/wiki", "status": 200, "dest": "/pages/wiki.html" },
-    { "src": "/api/getavatar", "status": 200, "dest": "http://46.247.108.145:2503/getavatar" },
+    { "src": "/api/getavatar", "status": 200, "dest": "http://node.jpman.eu:2503/getavatar" },
+    { "src": "/getposts", "status": 200, "dest": "http://node.jpman.eu:2503/getposts" },
     { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
   ]
 }
