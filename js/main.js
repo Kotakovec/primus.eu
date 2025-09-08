@@ -3,10 +3,15 @@ let posts = [
   { id:1, title:"Načítání", date:"15.8.2025", excerpt:"Probíhá načítání postů", image:"linear-gradient(180deg,#b26f2a,#6b3b2a)"}
 ];
 (async () => {
-  const pisatsnajifetch = await fetch('/getposts');
-  const pists = await pisatsnajifetch.json();
-  posts = pists;
-  renderFeed();
+  try {
+    const pisatsnajifetch = await fetch('/getposts');
+    const pists = await pisatsnajifetch.json();
+    posts = pists;
+    renderFeed();
+  } catch {
+    const reloadyesno = confirm('Nelze načíst posty. Chcete načíst stránku znovu?')
+    if (reloadyesno) location.reload();
+  }
 })();
 
 function createPostCard(post){
@@ -106,3 +111,4 @@ function renderStatus(){
   });
 
 //});
+
