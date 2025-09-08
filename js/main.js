@@ -28,9 +28,9 @@ function createPostCard(post){
   const body = document.createElement('div');
   body.className = 'body';
   const h3 = document.createElement('h3');
-  h3.textContent = post.title;
+  h3.innerHTML = post.title;
   const p = document.createElement('p');
-  p.textContent = post.excerpt;
+  p.innerHTML = post.excerpt;
   const meta = document.createElement('div');
   meta.className = 'meta';
   meta.innerHTML = `<span>❤ 0</span><span>${post.date}</span>`;
@@ -112,5 +112,6 @@ function renderStatus(){
   });
 
 //});
+
 
 
