@@ -566,3 +566,11 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.bold-wiki {
+  color: #fff;
+  background: #e74c3c;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
