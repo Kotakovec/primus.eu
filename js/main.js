@@ -22,6 +22,7 @@ function createPostCard(post){
   thumb.className = 'thumb';
   thumb.style.background = post.image;
   thumb.style.backgroundPosition = "center";
+  thumb.style.backgroundSize = "cover";
   postEl.appendChild(thumb);
 
   const body = document.createElement('div');
@@ -111,4 +112,5 @@ function renderStatus(){
   });
 
 //});
+
 
