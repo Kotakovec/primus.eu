@@ -33,9 +33,9 @@
 
           <div class="at-title">🔧 Základní příkazy hráče</div>
 
-          /pay <hráč> <částka> - Pošli peníze jinému hráči. Hodí se pro tipy, spolupráci nebo nákup od kamarádů.<br><br>
+          /pay [hráč] [částka] - Pošli peníze jinému hráči. Hodí se pro tipy, spolupráci nebo nákup od kamarádů.<br><br>
 
-          /tpa <hráč> - Pošli žádost o teleport ke konkrétnímu hráči.<br><br>
+          /tpa [hráč] - Pošli žádost o teleport ke konkrétnímu hráči.<br><br>
 
           /tpaccept - Přijmi žádost o teleport od jiného hráče.<br><br>
 
@@ -45,126 +45,65 @@
 
           /menu - Hlavní herní menu – zjistíš informace o účtu, odměnách a akcích.<br><br>
 
-          /lobby
+          /lobby - Návrat do lobby.<br><br>
 
-          Návrat do lobby.
+          /msg [hráč] [zpráva] - Soukromá zpráva mezi hráči.<br><br>
 
-          /msg <hráč> <zpráva>
+          /ah - Otevři aukční dům – prodej a nákup vzácných předmětů mezi hráči.<br><br>
 
-          Soukromá zpráva mezi hráči.
+          /ah sell [částka] - Nastaví cenu předmětu, který chceš prodat. Po koupi předmětu jiným hráčem se peníze přičtou na tvůj účet.<br><br>
 
-          /ah
-          
-          Otevři aukční dům – prodej a nákup vzácných předmětů mezi hráči.
+          /trade [hráč] - Obchoduj přímo s hráčem bez aukčního domu.<br><br>
 
-          /ah sell <částka>
+          /shop - Otevři obchodní GUI, nakupuj nebo prodávej zboží. Perfektní pro získání surovin a vybavení.<br><br>
 
-          Nastaví cenu předmětu, který chceš prodat. Po koupi předmětu jiným hráčem se peníze přičtou na tvůj účet.
+          /vote - Hlasování pro server – získáš peníze, klíče a speciální odměny.<br><br>
 
-          /trade <hráč>
+          /res select vert - Rozšíření výběru při tvorbě rezidence na výšku 0–256 bloků.<br><br>
 
-          Obchoduj přímo s hráčem bez aukčního domu.
+          /res expand [číslo] - Rozšíření výběru rezidence směrem, kam koukáš.<br><br>
 
-          /shop
+          /res create [název] - Vytvoření residence s unikátním názvem.<br><br>
 
-          Otevři obchodní GUI, nakupuj nebo prodávej zboží. Perfektní pro získání surovin a vybavení.
+          /res tp [název] - Teleport do konkrétní residence.<br><br>
 
-          /vote
+          /res set [hráč] trusted - Přidání hráče jako důvěryhodného do residence.<br><br>
 
-          Hlasování pro server – získáš peníze, klíče a speciální odměny.
+          /pwarp set [jméno] - Vytvoření vlastního warpu pro rychlý přesun.<br><br>
 
-          /res select vert
+          /pwarp [jméno] - Teleport na vlastní warp.<br><br>
 
-          Rozšíření výběru při tvorbě rezidence na výšku 0–256 bloků.
+          /marriage propose [hráč] - Nabídka zasnoubení jinému hráči.<br><br>
 
-          /res expand <číslo>
+          /marriage accept - Potvrzení svatby a aktivace bonusů, speciálního chatu a roleplay.<br><br>
 
-          Rozšíření výběru rezidence směrem, kam koukáš.
+          /minions - Správa minionů, kteří tě podporují při těžbě a přinášejí odměny.<br><br>
 
-          /res create <název>
+          /jobs browse - Zobrazení všech dostupných prací.<br><br>
 
-          Vytvoření residence s unikátním názvem.
+          /jobs join [práce] - Přidání se do konkrétní práce.<br><br>
 
-          /res tp <název>
+          /jobs leave [práce] - Opustíš práci, kterou jsi měl.<br><br>
 
-          Teleport do konkrétní residence.
+          /jobs stats - Kontrola statistik práce a vydělaných odměn.<br><br>
 
-          /res set <hráč> trusted
+          /sit - Sezení pro roleplay a dekoraci.<br><br>
 
-          Přidání hráče jako důvěryhodného do residence.
+          /brew - Výroba alkoholu a speciálních nápojů. Pozor na přešvihnutí kvality – efekty motání hlavy, zpomalení.<br><br>
 
-          /pwarp set <jméno>
+          /skills - Zobrazení herních skillů a pokroku hráče.<br><br>
 
-          Vytvoření vlastního warpu pro rychlý přesun.
+          /spawn - Teleport na spawn.<br><br>
 
-          /pwarp <jméno>
+          /afk - Aktivace AFK režimu na spawnu, kde získáváš pasivně peníze a odměny.<br><br>
 
-          Teleport na vlastní warp.
+          /chatgames - Občas se objeví otázka nebo úkol v chatu. Správná odpověď = peníze, klíče, odměny.<br><br>
 
-          /marriage propose <hráč>
+          /evenmorefish - Rybářské závody – pokud je na serveru min. 10 hráčů, spustí se závod. Vítěz získá peníze, speciální odměny a respekt.<br><br>
 
-          Nabídka zasnoubení jinému hráči.
+          /customenchant - Při enchantování předmětu je šance získat unikátní enchant, který jinde nenajdeš.<br><br>
 
-          /marriage accept
-
-          Potvrzení svatby a aktivace bonusů, speciálního chatu a roleplay.
-
-          /minions
-
-          Správa minionů, kteří tě podporují při těžbě a přinášejí odměny.
-
-          /jobs browse
-
-          Zobrazení všech dostupných prací.
-
-          /jobs join <práce>
-
-          Přidání se do konkrétní práce.
-
-          /jobs leave <práce>
-
-          Opustíš práci, kterou jsi měl.
-
-          /jobs stats
-
-          Kontrola statistik práce a vydělaných odměn.
-
-          /sit
-
-          Sezení pro roleplay a dekoraci.
-
-          /brew
-
-          Výroba alkoholu a speciálních nápojů. Pozor na přešvihnutí kvality – efekty motání hlavy, zpomalení.
-
-          /skills
-
-          Zobrazení herních skillů a pokroku hráče.
-
-          /spawn
-
-          Teleport na spawn.
-
-          /afk
-
-          Aktivace AFK režimu na spawnu, kde získáváš pasivně peníze a odměny.
-
-          /chatgames
-
-          Občas se objeví otázka nebo úkol v chatu. Správná odpověď = peníze, klíče, odměny.
-
-          /evenmorefish
-
-          Rybářské závody – pokud je na serveru min. 10 hráčů, spustí se závod. Vítěz získá peníze, speciální odměny a respekt.
-
-          /customenchant
-
-          Při enchantování předmětu je šance získat unikátní enchant, který jinde nenajdeš.
-
-          /skin set <jméno>
-
-          Změna skinu hráče bez nutnosti mít skin na účtu Minecraft.
-
+          /skin set [jméno] - Změna skinu hráče bez nutnosti mít skin na účtu Minecraft.<br><br>
 
           <div class="at-title">3. Pravidla pro A-Team (staff, helper, moderátor, admin, owner)</div>
 
