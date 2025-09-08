@@ -22,6 +22,10 @@ body {
   background-attachment: fixed;
   color: #fff;
 }
+a {
+  color: #4C4CE4;
+  text-decoration-color: #4C4CE4;
+}
 .app {
   display: grid;
   grid-template-columns: 260px 1fr 320px;
@@ -585,4 +589,5 @@ body {
   border-radius: 4px;
   font-weight: bold;
   font-size: 1,8em;
+
 }
