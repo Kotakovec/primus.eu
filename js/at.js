@@ -2,7 +2,10 @@ async function buildStaffData() {
     const s8z3avatar = await getAvatar("557583720727576579");
     const mrtomicz = await getAvatar("818109259048157226");
     const kajina = await getAvatar("818109259048157226");
-
+    const trendyz = await getAvatar("959821764236542012");
+    const kotiak = await getAvatar("850251537057841175");
+    const huannn74 = await getAvatar("306057389235240962");
+    const skajmajnr = await getAvatar("1380630331056590958");
 
     return {
       "Vedení": [
@@ -17,7 +20,7 @@ async function buildStaffData() {
         },
         {
           "status": "on",
-          "avatar": "/images/kotak.png",
+          "avatar": kotiak,
           "name": "Koťák",
           "realname": "Jakub",
           "role": "Šéf Projektu",
@@ -28,7 +31,7 @@ async function buildStaffData() {
       "Developeři": [
         {
           "status": "off",
-          "avatar": "/images/juuaann74.png",
+          "avatar": huannn74,
           "name": "Juuaann74",
           "realname": "???",
           "role": "Server Developer",
@@ -42,13 +45,13 @@ async function buildStaffData() {
           "realname": "Tomáš",
           "role": "Web developer",
           "social": "bude pridano",
-          "badge": "Dovolená"
+          "badge": null
         }
       ],
       "Technici": [
         {
           "status": "off",
-          "avatar": "/images/kajinaa.png",
+          "avatar": kajina,
           "name": "kajinaa.",
           "realname": "Karolína",
           "role": "Technička",
@@ -59,7 +62,7 @@ async function buildStaffData() {
       "Podpora": [
         {
           "status": "off",
-          "avatar": "/images/skyminercz.png",
+          "avatar": skajmajnr,
           "name": "SkyMinerCz",
           "realname": "???",
           "role": "Helper",
